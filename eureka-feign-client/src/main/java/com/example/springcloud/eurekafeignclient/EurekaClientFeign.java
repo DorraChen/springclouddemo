@@ -1,6 +1,7 @@
 package com.example.springcloud.eurekafeignclient;
 
 import com.example.springcloud.eurekafeignclient.config.FeignConfig;
+import com.example.springcloud.eurekafeignclient.config.HiHystrix;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author clz
  * @date 2019/02/28 16:10
  */
-@FeignClient(value = "eureka-client",configuration = FeignConfig.class)
+@FeignClient(value = "eureka-client",configuration = FeignConfig.class,fallback = HiHystrix.class)
 public interface EurekaClientFeign {
     /**
      * @param name

@@ -1,5 +1,6 @@
 package com.example.springcloud.eurekaribbonclient;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
@@ -17,10 +18,16 @@ public class RibbonController {
     @Autowired
     RestTemplate restTemplate;
 
+    @HystrixCommand(fallbackMethod = "hiError")
     @GetMapping("hi")
     public String hi(@RequestParam(required = false,defaultValue = "springclouddemo") String name){
         return restTemplate.getForObject("http://eureka-client/hi?name=" + name, String.class);
     }
+
+    public String hiError(String name){
+        return "hi, " + name +", sorry, error exists!";
+    }
+
 
     @Autowired
     private LoadBalancerClient loadBalancer;
