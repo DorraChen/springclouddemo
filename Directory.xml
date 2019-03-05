@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tree name="">
-    <tree name="\eureka-client" text="Eureka Client" info="<b>Code:8*****</b>"/>
-    <tree name="\eureka-server" text="Eureka Server" info="<b>Code:8*****</b>"/>
-    <tree name="\eureka-ribbon-client" text="eureka+ribbon" info="<b>Code:8*****</b>"/>
-    <tree name="\ribbon-client" text="ribbon禁用Eureka" info="<b>Code:8*****</b>"/>
-    <tree name="\eureka-feign-client" text="feign" info="<b>Code:8*****</b>"/>
+    <tree name="\eureka-client" text="02-Eureka Client" info="<b>Code:8*****</b>"/>
+    <tree name="\eureka-server" text="01-Eureka Server" info="<b>Code:8*****</b>"/>
+    <tree name="\eureka-ribbon-client" text="03-eureka+ribbon" info="<b>Code:8*****</b>"/>
+    <tree name="\ribbon-client" text="04-ribbon禁用Eureka" info="<b>Code:8*****</b>"/>
+    <tree name="\eureka-feign-client" text="05-feign" info="<b>Code:8*****</b>"/>
+    <tree name="\eureka-monitor-client" text="06-turbine" info="<b>Code:8*****</b>"/>
 </tree>
