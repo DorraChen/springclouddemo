@@ -7,14 +7,29 @@ server:
 spring:
   application:
     name: service-zuul
+
+#--------要Ribbon做负载均衡-----------------
+#zuul:
+#  routes:
+#    hiapi:
+#      path: /hiapi/**
+#      serviceId: eureka-client
+#    ribbonapi:
+#      path: /ribbonapi/**
+#      serviceId: eureka-ribbon-client
+#    feignapi:
+#      path: /feignapi/**
+#      serviceId: eureka-feign-client
+
+#------既要Ribbon做负载均衡,又要指定url则需要自己维护负载均衡的服务注册列表
 zuul:
   routes:
     hiapi:
       path: /hiapi/**
-      serviceId: eureka-client
-    ribbonapi:
-      path: /ribbonapi/**
-      serviceId: eureka-ribbon-client
-    feignapi:
-      path: /feignapi/**
-      serviceId: eureka-feign-client
+      serviceId: hiapi-v1
+ribbon:
+  eureka:
+    enabled: false
+hiapi-v1:
+  ribbon:
+    listOfServers: http://localhost:8762,http://localhost:8763
