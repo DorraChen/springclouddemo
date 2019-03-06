@@ -1,21 +1,21 @@
-package com.example.springcloud.eurekamonitorclient;
+package com.example.springcloud.eurekazuulclient;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.turbine.EnableTurbine;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
  * @author admin
- * @date 2019-03-05 14:12:00
+ * @date 2019-03-06 14:35:05
  */
 @SpringBootApplication
 @EnableEurekaClient
-@EnableTurbine
-public class EurekaMonitorClientApplication {
+@EnableZuulProxy
+public class EurekaZuulClientApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EurekaMonitorClientApplication.class, args);
+		SpringApplication.run(EurekaZuulClientApplication.class, args);
 	}
 
 }

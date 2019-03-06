@@ -6,4 +6,5 @@
     <tree name="\ribbon-client" text="04-ribbon禁用Eureka" info="<b>Code:8*****</b>"/>
     <tree name="\eureka-feign-client" text="05-feign" info="<b>Code:8*****</b>"/>
     <tree name="\eureka-monitor-client" text="06-turbine" info="<b>Code:8*****</b>"/>
+    <tree name="\eureka-zuul-client" text="07-zuul" info="<b>Code:8*****</b>"/>
 </tree>
